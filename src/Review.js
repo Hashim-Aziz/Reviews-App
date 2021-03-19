@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import People from "./data";
-import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa"; // react-icon is a library from fa icon for details visit https://react-icons.github.io/react-icons/
 
 const Review = () => {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0); // state to handle the indexs of People array
   const { name, job, image, text } = People[index];
 
+  //checkNumber function to handle overflow and underflow of People array index
   const checkNumber = (number) => {
     if (number > People.length - 1) {
       return 0;
